@@ -1,0 +1,12 @@
+<?xml version="1.0" encoding="UTF-8"?><project-modules id="moduleCoreId" project-version="1.5.0">
+    <wb-module deploy-name="StockPredictor">
+        <wb-resource deploy-path="/" source-path="/EarContent" tag="defaultRootSource"/>
+        <dependent-module archiveName="StockPredictorWeb.war" deploy-path="/" handle="module:/resource/StockPredictorWeb/StockPredictorWeb">
+            <dependent-object/>
+            <dependency-type>uses</dependency-type>
+        </dependent-module>
+        <dependent-module archiveName="genson-1.1.jar" deploy-path="/lib" handle="module:/classpath/lib/StockPredictorWeb/WebContent/WEB-INF/lib/genson-1.1.jar">
+            <dependency-type>uses</dependency-type>
+        </dependent-module>
+    </wb-module>
+</project-modules>

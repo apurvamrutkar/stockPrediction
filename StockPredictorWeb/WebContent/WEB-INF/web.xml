@@ -1,0 +1,33 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<web-app xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+	xmlns="http://java.sun.com/xml/ns/javaee" xmlns:web="http://java.sun.com/xml/ns/javaee/web-app_2_5.xsd"
+	xsi:schemaLocation="http://java.sun.com/xml/ns/javaee http://java.sun.com/xml/ns/javaee/web-app_2_5.xsd"
+	id="WebApp_ID" version="2.5">
+	<display-name>StockPredictor</display-name>
+	<listener>
+		<listener-class>com.apurv.stockpredictor.listners.StockPredictorListner</listener-class>
+	</listener>
+	<servlet>
+		<servlet-name>WebServiceEndpoint</servlet-name>
+		<servlet-class>com.sun.jersey.spi.container.servlet.ServletContainer</servlet-class>
+		<init-param>
+			<param-name>com.sun.jersey.config.property.packages</param-name>
+			<param-value>com.apurv.stockpredictor.sei</param-value>
+		</init-param>
+		<load-on-startup>1</load-on-startup>
+	</servlet>
+	<servlet-mapping>
+		<servlet-name>WebServiceEndpoint</servlet-name>
+		<url-pattern>/api/*</url-pattern>
+	</servlet-mapping>
+
+
+
+	<!-- area for all the context parameters -->
+
+	<!-- area for the servlets and servlet mappings -->
+	<!-- <servlet> <servlet-name>Input the name of the servlet</servlet-name> 
+		<servlet-class>Input the full qualified class name of the servlet</servlet-class> 
+		</servlet> <servlet-mapping> <servlet-name>Input the name of the servlet</servlet-name> 
+		<url-pattern>Input the url pattern</url-pattern> </servlet-mapping> -->
+</web-app>
